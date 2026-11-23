@@ -1,0 +1,32 @@
+[
+  {
+    "name": "hero",
+    "file": "assets/images/hero.webp",
+    "source": "OpenAI built-in image generation",
+    "prompt": "Create a premium 3D editorial illustration for the left side of a modern female software developer portfolio. Landscape 4:3 image. One elegant open lavender laptop floating at a slight three-quarter angle, screen showing a minimal deep-purple code editor with short pastel line strokes, absolutely no legible words. Behind it an oversized flowing glossy lilac glass ribbon loop, a matte apricot sphere and a small polished chrome sphere. Tiny floating UI rounded squares. Restrained composition, sculptural soft materials, beautiful studio lighting and soft ground shadows. Seamless very pale lavender background #f5f2fc. Objects centered with generous air. Sophisticated high-end product design render, ultra clean, no watermarks, no people, no caption, no collage. Final website asset."
+  },
+  {
+    "name": "studyflow",
+    "file": "assets/images/studyflow.webp",
+    "source": "OpenAI built-in image generation",
+    "prompt": "Generate a premium product visualization portfolio image, landscape 4:3. Two elegant realistic smartphones with slender pale silver bezels, one straight and one gently angled, showing an academic study planner app. Rich lavender and violet user interface on ivory background, weekly calendar squares, task checkboxes, tiny chart, simple geometrical icons. Only tiny English labels 'Studyflow' and 'My week' if needed. One phone front, second behind left, on a sculptural lavender curved platform. A small glossy lilac sphere. Seamless light pastel lavender studio backdrop. Professional product photography and clean soft shadows, tactile detailed materials. Beautiful 3D mockup, ample room around objects, no people, no watermark. This is fictional portfolio artwork for a university software project."
+  },
+  {
+    "name": "dashboard",
+    "file": "assets/images/dashboard.webp",
+    "source": "OpenAI built-in image generation",
+    "prompt": "Premium landscape 4:3 software project portfolio artwork. A realistic slim desktop display on a low pedestal in a cool deep navy and muted aqua studio. On the screen a beautifully designed analytics dashboard with warm off-white canvas, dark navy vertical sidebar, elegant turquoise bar chart and indigo line chart, 3 small KPI cards, orderly finance table, only minimal English headings 'Insight' and 'Overview'. A small teal translucent cube and elegant matte navy cylinder beside the monitor. Three-quarter front view, soft directional lighting, high-end 3D product rendering, readable visual hierarchy, no people, no watermark, no extra captions. Complete composition with generous margins. Fictional academic analytics dashboard mockup."
+  },
+  {
+    "name": "store",
+    "file": "assets/images/store.webp",
+    "source": "OpenAI built-in image generation",
+    "prompt": "High-end 3D web design portfolio artwork in landscape 4:3 format. An ultra thin silver laptop seen at three-quarter angle, on warm soft apricot and terracotta studio backdrop. Screen shows a gorgeous minimal ecommerce store for sculptural contemporary furniture: ivory web page, short heading 'FORMA', product photo of curved terracotta upholstered lounge chair, a few minimal product tiles, charcoal typography, pale peach cart button. A miniature real sculptural chair next to the laptop on a peach pedestal. Gallery-quality warm lighting, soft shadows, elegant clear geometry, photorealistic materials, no people, no watermarks, no extra caption. Fictional university ecommerce prototype."
+  },
+  {
+    "name": "coffee",
+    "file": "assets/images/coffee.webp",
+    "source": "OpenAI built-in image generation",
+    "prompt": "Premium web development portfolio cover, landscape 4:3. A realistic floating widescreen browser mockup seen almost straight on in a deep warm espresso and sage green studio environment. Browser website is an artisanal coffee brand called 'Riwaq' with an elegant cream serif heading, huge macro photograph of steaming coffee in a pale ceramic cup, forest green navigation and tasteful cream call to action. In foreground a real minimal kraft coffee bag and pale sage ceramic mug on dark brown sculptural platforms. Cozy lighting and subtle plant shadow, elevated 3D advertising render, exceptional material details, no people, no watermark, no caption. Fictional university responsive cafe website prototype."
+  }
+]
