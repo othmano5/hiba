@@ -1,0 +1,103 @@
+import { chromium } from 'playwright';
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+
+const browser = await chromium.launch({ channel: 'msedge', headless: true });
+const page = await browser.newPage({ viewport: { width: 1440, height: 1000 }, deviceScaleFactor: 1 });
+const errors = [];
+page.on('pageerror', e => errors.push(e.message));
+page.on('response', response => { if (response.status() >= 400) errors.push(`${response.status()}: ${response.url()}`); });
+const origin = process.env.TEST_URL || 'http://127.0.0.1:4173';
+try {
+  await page.goto(origin, { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+  assert.equal(await page.locator('html').getAttribute('dir'), 'rtl');
+  assert.equal(await page.locator('.hero-name').innerText(), 'هبة خالد الزين.');
+  assert.match(await page.title(), /هبة خالد الزين/);
+  assert.match(await page.locator('#print-resume').innerText(), /هبة خالد الزين/);
+  await page.locator('#contact-form button[type="submit"]').click();
+  assert.equal(await page.locator('#contact-name').getAttribute('aria-invalid'), 'true');
+  assert.equal(await page.locator('#message-preview').isVisible(), false);
+  assert.equal(await page.locator('.project-card:visible').count(), 4);
+  await page.locator('[data-filter="app"]').click();
+  assert.equal(await page.locator('.project-card:visible').count(), 1);
+  await page.locator('[data-filter="all"]').click();
+  await page.locator('[data-project="studyflow"]').click();
+  assert.equal(await page.locator('#project-dialog').evaluate(e => e.open), true);
+  await page.keyboard.press('Escape');
+  assert.equal(await page.locator('#project-dialog').evaluate(e => e.open), false);
+  await page.locator('#theme-toggle').click();
+  assert.equal(await page.locator('html').getAttribute('data-theme'), 'dark');
+  await page.reload({ waitUntil: 'networkidle' });
+  assert.equal(await page.locator('html').getAttribute('data-theme'), 'dark');
+  await page.locator('#language-toggle').click();
+  assert.equal(await page.locator('html').getAttribute('lang'), 'en');
+  assert.equal(await page.locator('html').getAttribute('dir'), 'ltr');
+  assert.equal(await page.locator('.hero-name').innerText(), 'Hiba Khaled Al-Zein.');
+  assert.match(await page.title(), /Hiba Khaled Al-Zein/);
+  await page.reload({ waitUntil: 'networkidle' });
+  assert.equal(await page.locator('html').getAttribute('lang'), 'en');
+  for (const width of [320, 768, 1440]) {
+    await page.setViewportSize({ width, height: 1000 });
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, `English overflow at ${width}px`);
+  }
+  await page.setViewportSize({ width: 1440, height: 1000 });
+  await page.locator('#language-toggle').click();
+  await page.locator('#theme-toggle').click();
+  await page.locator('#contact-name').fill('طالبة تجريبية');
+  await page.locator('#contact-email').fill('student@example.com');
+  await page.locator('#contact-message').fill('أرغب في التعاون على مشروع تخرج جامعي.');
+  await page.locator('#contact-form button[type="submit"]').click();
+  assert.equal(await page.locator('#message-preview').isVisible(), true);
+  assert.match(await page.locator('#message-output').inputValue(), /طالبة تجريبية/);
+  assert.match(await page.locator('#open-mail').getAttribute('href'), /^mailto:/);
+  await page.evaluate(() => { window.print = () => { window.__didPrint = true; }; });
+  await page.locator('[data-print]').first().click();
+  assert.equal(await page.evaluate(() => window.__didPrint), true);
+  assert.equal(await page.evaluate(() => [...document.images].every(i => i.complete && i.naturalWidth > 0)), true);
+  await fs.mkdir('artifacts', { recursive: true });
+  await fs.mkdir('.impeccable/review', { recursive: true });
+  await page.goto(origin, { waitUntil: 'networkidle' });
+  await page.evaluate(async () => {
+    for (const img of document.images) img.loading = 'eager';
+    await Promise.all([...document.images].map(img => img.decode()));
+    await document.fonts.ready;
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  });
+  await page.waitForFunction(() => [...document.fonts].filter(f => f.family === 'Alexandria').some(f => f.status === 'loaded'));
+  await page.screenshot({ path: 'artifacts/preview-full.png', fullPage: true });
+  await page.screenshot({ path: 'artifacts/preview-desktop.png' });
+  await page.screenshot({ path: '.impeccable/review/desktop.png', fullPage: true });
+  await page.locator('[data-project="studyflow"]').click();
+  await page.screenshot({ path: 'artifacts/preview-project.png' });
+  await page.keyboard.press('Escape');
+  await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
+  await page.emulateMedia({ media: 'print' });
+  await page.pdf({ path: 'artifacts/Hiba-Khaled-Al-Zein-CV.pdf', format: 'A4', printBackground: true });
+  await page.emulateMedia({ media: 'screen' });
+  await page.locator('#theme-toggle').click();
+  await page.screenshot({ path: 'artifacts/preview-dark.png', fullPage: true });
+  await page.locator('#theme-toggle').click();
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto(origin, { waitUntil: 'networkidle' });
+  await page.evaluate(async () => {
+    for (const img of document.images) img.loading = 'eager';
+    await Promise.all([...document.images].map(img => img.decode()));
+    await document.fonts.ready;
+  });
+  await page.locator('#menu-toggle').click();
+  assert.equal(await page.locator('#menu-toggle').getAttribute('aria-expanded'), 'true');
+  await page.locator('.nav-link[href="#projects"]').click();
+  assert.equal(await page.locator('#menu-toggle').getAttribute('aria-expanded'), 'false');
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+  await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
+  await page.screenshot({ path: 'artifacts/preview-mobile-top.png' });
+  await page.screenshot({ path: 'artifacts/preview-mobile.png', fullPage: true });
+  await page.screenshot({ path: '.impeccable/review/mobile.png', fullPage: true });
+  for (const width of [320, 768, 1024, 1920]) {
+    await page.setViewportSize({ width, height: 900 });
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, `Overflow at ${width}px`);
+  }
+  assert.deepEqual(errors, []);
+  console.log('PASS: RTL, filters, lightbox/Escape, theme persistence, language persistence, compose, print, images, mobile nav, 320/390/768/1024/1440/1920px overflow, and no JS errors.');
+} finally { await browser.close(); }
