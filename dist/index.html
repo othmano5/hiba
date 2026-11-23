@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="هبة خالد الزين — مطوّرة برمجيات. سيرة ذاتية تفاعلية ومعرض مشاريع جامعية في تطوير الويب وتصميم التجارب الرقمية.">
+  <meta name="theme-color" content="#7855d8">
+  <title>هبة خالد الزين | مطوّرة برمجيات</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preload" href="assets/fonts/alexandria-arabic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem('hiba-theme')||'light';const l=localStorage.getItem('hiba-lang');if(l==='en'){document.documentElement.lang='en';document.documentElement.dir='ltr'}}catch{}</script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">انتقل إلى المحتوى</a>
+  <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1Z"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 6-6 6 6 6m8-12 6 6-6 6M14 3l-4 18"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 5C8 2 3 3 2 4v16c3-2 7-1 10 1 3-2 7-3 10-1V4c-1-1-6-2-10 1Zm0 0v16"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m3 7 9 6 9-6"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.4 1.4m11.2 11.2L19 19M5 19l1.4-1.4M17.6 6.4 19 5"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 13a9 9 0 0 1-10-10 9 9 0 1 0 10 10Z"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 16v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 2 2.6 7.4L22 12l-7.4 2.6L12 22l-2.6-7.4L2 12l7.4-2.6Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 14 6-6 6 6"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-terminal" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="18" rx="3"/><path d="m6 8 4 4-4 4m7 0h5"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9L2 9 22 2ZM22 2 11 13"/></symbol>
+  </svg>
+
+  <header class="mobile-header">
+    <a href="#home" class="brand compact" aria-label="هبة خالد الزين، الرئيسية"><span class="brand-mark" dir="ltr">h<span>.</span></span><strong data-i18n="name">هبة خالد الزين</strong></a>
+    <button class="icon-button" id="menu-toggle" aria-label="فتح القائمة" aria-controls="sidebar" aria-expanded="false"><svg class="icon"><use href="#i-menu"/></svg></button>
+  </header>
+  <div class="nav-overlay" id="nav-overlay" hidden></div>
+
+  <aside class="sidebar" id="sidebar" aria-label="التنقل الرئيسي">
+    <a href="#home" class="brand"><span class="brand-mark" dir="ltr">h<span>.</span></span><span class="brand-copy"><strong data-i18n="name">هبة خالد الزين</strong><span data-i18n="roleShort">مطوّرة برمجيات</span></span></a>
+    <nav class="navigation">
+      <a class="nav-link active" href="#home" aria-current="location"><svg class="icon"><use href="#i-home"/></svg><span data-i18n="navHome">الرئيسية</span><span class="nav-dot"></span></a>
+      <a class="nav-link" href="#about"><svg class="icon"><use href="#i-user"/></svg><span data-i18n="navAbout">عنّي</span><span class="nav-dot"></span></a>
+      <a class="nav-link" href="#projects"><svg class="icon"><use href="#i-grid"/></svg><span data-i18n="navWork">أعمالي</span><span class="nav-dot"></span></a>
+      <a class="nav-link" href="#skills"><svg class="icon"><use href="#i-code"/></svg><span data-i18n="navSkills">مهاراتي</span><span class="nav-dot"></span></a>
+      <a class="nav-link" href="#journey"><svg class="icon"><use href="#i-book"/></svg><span data-i18n="navJourney">رحلتي</span><span class="nav-dot"></span></a>
+      <a class="nav-link" href="#contact"><svg class="icon"><use href="#i-mail"/></svg><span data-i18n="navContact">تواصل معي</span><span class="nav-dot"></span></a>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="availability"><span class="status-dot"></span><span data-i18n="available">منفتحة على فرص التدريب</span></div>
+      <button class="button sidebar-download" data-print><svg class="icon"><use href="#i-download"/></svg><span data-i18n="downloadCV">تحميل السيرة الذاتية</span></button>
+      <p class="sidebar-note" data-i18n="sidebarNote">القليل من الفضول،<br>والكثير من الشغف.</p>
+      <span class="copyright" dir="ltr">© <span data-year>2026</span> Hiba Khaled Al-Zein</span>
+    </div>
+  </aside>
+
+  <main class="main" id="main">
+    <div class="page-container">
+      <div class="topbar">
+        <span class="topbar-caption" data-i18n="topCaption">مساحتي الصغيرة على الإنترنت</span>
+        <div class="utility-actions">
+          <button class="language-toggle" id="language-toggle" aria-label="Switch to English"><svg class="icon"><use href="#i-globe"/></svg><span id="language-label">EN</span></button>
+          <span class="utility-divider"></span>
+          <button class="icon-button" id="theme-toggle" aria-label="تفعيل الوضع الداكن" aria-pressed="false"><svg class="icon"><use id="theme-icon" href="#i-moon"/></svg></button>
+        </div>
+      </div>
+
+      <section class="hero section-anchor" id="home" aria-labelledby="hero-heading">
+        <div class="hero-copy">
+          <h1 id="hero-heading"><span class="hero-name" data-i18n="heroName">هبة خالد الزين<span class="accent">.</span></span><span data-i18n="heroLine1">أحوّل الأفكار إلى</span><span class="hero-accent" data-i18n="heroLine2">تجارب رقمية.</span></h1>
+          <p class="hero-role" data-i18n="heroRole">مطوّرة برمجيات، بعقلٍ منطقي وعينٍ إبداعية.</p>
+          <p class="hero-description" data-i18n="heroDescription">أكتب الشيفرة لأصنع شيئًا مفيدًا وجميلًا. أهتم ببناء مواقع وتطبيقات سهلة الاستخدام، وأؤمن أن التفاصيل الصغيرة تصنع تجربة مختلفة.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects"><svg class="icon"><use href="#i-grid"/></svg><span data-i18n="exploreWork">اكتشف أعمالي</span></a>
+            <button class="button button-outline" data-print><svg class="icon"><use href="#i-download"/></svg><span data-i18n="downloadShort">تحميل CV</span></button>
+          </div>
+          <div class="hero-location"><svg class="icon"><use href="#i-pin"/></svg><span data-i18n="location">دمشق، سوريا</span><span class="tiny-separator"></span><span data-i18n="openRemote">أصنع من أي مكان</span></div>
+        </div>
+        <div class="hero-visual">
+          <img src="assets/images/hero.webp" alt="حاسوب بنفسجي محاط بأشكال زجاجية، رسم ثلاثي الأبعاد مولّد" data-alt="heroAlt" width="1200" height="900" fetchpriority="high">
+          <span class="floating-label"><span class="label-icon"><svg class="icon"><use href="#i-code"/></svg></span><span><strong data-i18n="visualTitle">فكرة. شيفرة. أثر.</strong><small data-i18n="visualNote">هنا تبدأ الحكاية</small></span></span>
+          <span class="visual-corner" dir="ltr">&lt; / &gt;</span>
+        </div>
+      </section>
+
+      <div class="intro-strip"><span data-i18n="stripCopy">فضول يقودني. شغف يحرّكني. وشيفرة تعبّر عنّي.</span><div class="strip-tools" dir="ltr"><span>HTML</span><i></i><span>CSS</span><i></i><span>JavaScript</span><svg class="icon"><use href="#i-spark"/></svg></div></div>
+
+      <section class="about-section section-anchor" id="about" aria-labelledby="about-heading">
+        <div class="section-heading"><h2 id="about-heading" data-i18n="aboutTitle">أكثر من مجرد شيفرة<span class="accent">.</span></h2><span class="section-note" data-i18n="aboutNote">تعرّف إليّ عن قرب</span></div>
+        <div class="about-layout">
+          <div class="about-copy"><p class="about-lead" data-i18n="aboutLead">أنا هبة خالد الزين، مطوّرة برمجيات أجد متعتي في تحويل الأسئلة المعقّدة إلى حلول بسيطة.</p><p data-i18n="aboutText">بدأت رحلتي بفضول: كيف تتحوّل فكرة صغيرة إلى تطبيق نستخدمه كل يوم؟ ومنذ ذلك الوقت، أصبحت البرمجة طريقتي في الاستكشاف والبناء. أركّز على تطوير الويب، وأجمع بين التفكير التحليلي والاهتمام بتجربة المستخدم.</p><p data-i18n="aboutText2">أحب أن أفهم المشكلة أولًا، ثم أصمّم حلًا واضحًا وأطوّره خطوة بخطوة. وفي كل مشروع، أترك مساحة للتعلّم والتجربة والتحسين.</p><div class="about-values"><span><svg class="icon"><use href="#i-check"/></svg><span data-i18n="value1">شيفرة مرتّبة</span></span><span><svg class="icon"><use href="#i-check"/></svg><span data-i18n="value2">تفاصيل مدروسة</span></span><span><svg class="icon"><use href="#i-check"/></svg><span data-i18n="value3">تعلّم مستمر</span></span></div></div>
+          <div class="code-window" dir="ltr"><div class="code-window-bar"><span class="window-dots"><i></i><i></i><i></i></span><span>about-me.js</span><svg class="icon"><use href="#i-code"/></svg></div><pre><code><span class="syntax-muted">// A little about the developer</span>
+<span class="syntax-purple">const</span> <span class="syntax-blue">developer</span> = {
+  name: <span class="syntax-green">"Hiba Khaled Al-Zein"</span>,
+  role: <span class="syntax-green">"Software Developer"</span>,
+  mindset: <span class="syntax-green">"Always learning"</span>,
+  loves: [
+    <span class="syntax-green">"Clean code"</span>,
+    <span class="syntax-green">"Thoughtful design"</span>,
+    <span class="syntax-green">"Good coffee"</span>
+  ],
+  nextIdea: <span class="syntax-purple">yours</span>
+};</code></pre><div class="code-window-bottom"><span class="code-status"></span><span>Built with curiosity</span><span>UTF-8</span></div></div>
+        </div>
+      </section>
+
+      <section class="projects-section section-anchor" id="projects" aria-labelledby="projects-heading">
+        <div class="section-heading"><div><h2 id="projects-heading" data-i18n="workTitle">أفكار أخذت شكلًا<span class="accent">.</span></h2><p data-i18n="workDescription">مختارات من مشاريع تطبيقية تجمع الفكرة والتصميم والبرمجة.</p></div><span class="project-count"><span id="project-count">4</span><span data-i18n="projectsLabel">مشاريع</span></span></div>
+        <div class="filter-bar" role="group" aria-label="تصفية المشاريع"><button class="filter-button active" data-filter="all" aria-pressed="true" data-i18n="filterAll">كل الأعمال</button><button class="filter-button" data-filter="web" aria-pressed="false" data-i18n="filterWeb">مواقع ويب</button><button class="filter-button" data-filter="app" aria-pressed="false" data-i18n="filterApp">تطبيقات</button><button class="filter-button" data-filter="dashboard" aria-pressed="false" data-i18n="filterDash">لوحات بيانات</button></div>
+        <div class="projects-grid" id="projects-grid"></div>
+        <noscript><p>يرجى تفعيل JavaScript لعرض معرض المشاريع التفاعلي. يمكنك مشاهدة صور المشاريع مباشرة داخل مجلد assets/images.</p></noscript>
+        <p class="demo-note"><svg class="icon"><use href="#i-spark"/></svg><span data-i18n="demoNote">مشاريع تصوّرية للعرض الجامعي، مع صور مولّدة بالذكاء الاصطناعي.</span></p>
+      </section>
+
+      <section class="skills-section section-anchor" id="skills" aria-labelledby="skills-heading">
+        <div class="section-heading"><div><h2 id="skills-heading" data-i18n="skillsTitle">أدواتي لصناعة الفرق<span class="accent">.</span></h2><p data-i18n="skillsDescription">أختار الأداة التي تخدم الفكرة، وأتعلّم ما يجعلها أفضل.</p></div><svg class="section-symbol icon"><use href="#i-code"/></svg></div>
+        <div class="skill-rows">
+          <div class="skill-row"><div class="skill-label"><span class="skill-line-icon"><svg class="icon"><use href="#i-code"/></svg></span><div><h3 data-i18n="skillFrontend">تطوير الواجهات</h3><p data-i18n="skillFrontendDesc">واجهات حيّة تتكيّف مع كل شاشة</p></div></div><div class="skill-tags" dir="ltr"><span><b class="tech-html">&lt;/&gt;</b>HTML5</span><span><b class="tech-css">#</b>CSS3</span><span><b class="tech-js">JS</b>JavaScript</span><span><b class="tech-react">R</b>React</span></div></div>
+          <div class="skill-row"><div class="skill-label"><span class="skill-line-icon"><svg class="icon"><use href="#i-terminal"/></svg></span><div><h3 data-i18n="skillLogic">البرمجة والمنطق</h3><p data-i18n="skillLogicDesc">أساس متين لحلول يمكن تطويرها</p></div></div><div class="skill-tags" dir="ltr"><span><b class="tech-python">Py</b>Python</span><span><b class="tech-node">N</b>Node.js</span><span><b class="tech-sql">DB</b>SQL</span><span><b class="tech-git">Git</b>Git</span></div></div>
+          <div class="skill-row"><div class="skill-label"><span class="skill-line-icon"><svg class="icon"><use href="#i-spark"/></svg></span><div><h3 data-i18n="skillDesign">التصميم وطريقة العمل</h3><p data-i18n="skillDesignDesc">تجربة واضحة، من التخطيط إلى الاختبار</p></div></div><div class="skill-tags" dir="ltr"><span><b class="tech-figma">F</b>Figma</span><span><b class="tech-ui">UI</b>UI / UX</span><span><b class="tech-vs">&lt;&gt;</b>VS Code</span><span><b class="tech-rwd">↔</b>Responsive</span></div></div>
+        </div>
+      </section>
+
+      <section class="journey-section section-anchor" id="journey" aria-labelledby="journey-heading">
+        <div class="journey-intro"><h2 id="journey-heading" data-i18n="journeyTitle">كل خطوة،<br>تفتح احتمالًا جديدًا<span class="accent">.</span></h2><p data-i18n="journeyDescription">رحلة تعلّم تبدأ بالأساسيات، وتنمو مع كل فكرة تتحوّل إلى مشروع.</p><div class="journey-stamp"><svg class="icon"><use href="#i-book"/></svg><span data-i18n="journeyStamp">التعلّم لا يتوقّف عند التخرّج</span></div></div>
+        <div class="timeline">
+          <article class="timeline-item"><span class="timeline-marker"></span><span class="timeline-phase" data-i18n="phase1">بناء الأساس</span><h3 data-i18n="journey1Title">التفكير مثل المبرمجين</h3><p data-i18n="journey1Desc">فهم الخوارزميات وهياكل البيانات ومبادئ البرمجة، والتدرّب على تقسيم المشكلات إلى خطوات واضحة.</p><span class="timeline-tag" data-i18n="journey1Tag">أساسيات علوم الحاسوب</span></article>
+          <article class="timeline-item"><span class="timeline-marker"></span><span class="timeline-phase" data-i18n="phase2">من المعرفة إلى التطبيق</span><h3 data-i18n="journey2Title">أول فكرة تعمل على الشاشة</h3><p data-i18n="journey2Desc">بناء واجهات متجاوبة وإضافة التفاعل وإدارة البيانات، مع الاهتمام بإمكانية الوصول وتجربة الاستخدام.</p><span class="timeline-tag" data-i18n="journey2Tag">مشاريع جامعية وتعلّم ذاتي</span></article>
+          <article class="timeline-item current"><span class="timeline-marker"></span><span class="timeline-phase" data-i18n="phase3">الخطوة القادمة</span><h3 data-i18n="journey3Title">مساحة لتحدٍ جديد</h3><p data-i18n="journey3Desc">أسعى إلى فرصة تدريب أتعلم خلالها من فريق، وأساهم في تطوير منتجات تعالج مشكلات حقيقية.</p><span class="timeline-tag" data-i18n="journey3Tag">جاهزة للتعلّم والمشاركة</span></article>
+        </div>
+      </section>
+
+      <section class="contact-section section-anchor" id="contact" aria-labelledby="contact-heading">
+        <div class="contact-intro"><span class="contact-spark"><svg class="icon"><use href="#i-spark"/></svg></span><h2 id="contact-heading" data-i18n="contactTitle">لديك فكرة؟<br>لنبنِ شيئًا رائعًا<span class="accent">.</span></h2><p data-i18n="contactDescription">فرصة تدريب، مشروع جامعي، أو حتى حديث عن فكرة جديدة… يسعدني أن أسمع منك.</p><button class="email-button" id="copy-email"><svg class="icon"><use href="#i-mail"/></svg><span id="email-address" dir="ltr">hiba.khaled.alzein@example.com</span><svg class="icon small-icon"><use href="#i-copy"/></svg></button><span class="example-email" data-i18n="exampleEmail">بريد توضيحي — استبدله ببريدك الشخصي</span></div>
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-top-row"><div class="field"><label for="contact-name" data-i18n="formName">الاسم</label><input id="contact-name" name="name" autocomplete="name" maxlength="80" required placeholder="كيف أناديك؟" data-placeholder="namePlaceholder"><span class="field-error" id="name-error"></span></div><div class="field"><label for="contact-email" data-i18n="formEmail">البريد الإلكتروني</label><input id="contact-email" name="email" type="email" autocomplete="email" maxlength="150" required placeholder="you@example.com" dir="ltr"><span class="field-error" id="email-error"></span></div></div>
+          <div class="field"><label for="contact-message" data-i18n="formMessage">أخبرني عن فكرتك</label><textarea id="contact-message" name="message" rows="4" minlength="10" maxlength="3000" required placeholder="كل مشروع جميل يبدأ بمحادثة…" data-placeholder="messagePlaceholder"></textarea><span class="field-error" id="message-error"></span></div>
+          <div class="form-bottom"><button class="button button-primary" type="submit"><svg class="icon"><use href="#i-send"/></svg><span data-i18n="prepareMessage">تجهيز الرسالة</span></button><span data-i18n="formNote">تُجهَّز محليًا، دون إرسال تلقائي.</span></div>
+          <div class="message-preview" id="message-preview" hidden><label for="message-output" data-i18n="readyMessage">رسالتك جاهزة للمشاركة</label><textarea id="message-output" readonly rows="6"></textarea><div class="preview-actions"><button class="button button-outline" type="button" id="copy-message"><svg class="icon"><use href="#i-copy"/></svg><span data-i18n="copyMessage">نسخ الرسالة</span></button><a class="text-link" id="open-mail" href="mailto:hiba.khaled.alzein@example.com" data-i18n="openMail">فتح تطبيق البريد</a></div></div>
+        </form>
+      </section>
+
+      <footer class="footer"><div><a class="footer-brand" href="#home" dir="ltr">Hiba Khaled Al-Zein<span>.</span></a><span data-i18n="footerMade">صُنعت بشغف وتفاصيل تُشبهني.</span></div><span data-i18n="footerDemo">نموذج تعليمي ببيانات وأعمال توضيحية · 2026</span><a href="#home" class="back-to-top"><span data-i18n="backTop">إلى البداية</span><svg class="icon"><use href="#i-chevron"/></svg></a></footer>
+    </div>
+  </main>
+
+  <dialog id="project-dialog" class="project-dialog" aria-labelledby="dialog-title"><button id="close-dialog" class="dialog-close icon-button" aria-label="إغلاق التفاصيل"><svg class="icon"><use href="#i-close"/></svg></button><div id="dialog-content"></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <section class="print-resume" id="print-resume" aria-label="نسخة السيرة الذاتية للطباعة"></section>
+</body>
+</html>
