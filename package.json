@@ -1,0 +1,13 @@
+{
+  "name": "hiba-khaled-alzein-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Arabic developer portfolio university project in HTML, CSS and JavaScript",
+  "scripts": {
+    "start": "node tools/serve.mjs",
+    "test": "node tools/verify.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.55.1"
+  }
+}
